@@ -1,15 +1,32 @@
 <%= render 'pages/navbar' %>
-<div class='container d-flex justify-content: flex-start'>
-  <div class="card-product">
-    <h1><strong><%= @apartment.title %></strong></h1>
-  </div>
-</div>
-<div class='container d-flex justify-content-center'>
-  <div class="banner w-100" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
-  </div>
-</div>
 
-<div class='container d-flex justify-content-space-around'>
+<h1 class="show-title"><%= @apartment.title %></h1>
+<section class= "pictures-section">
+  <div class="main-picture"></div>
+  <div class= "small-pictures">
+  <div class="photo1"></div>
+  <div class="photo2"></div>
+  <div class="photo3"></div>
+  <div class="photo4"></div>
+  </div>
+</section>
+
+<section class= "description-and-booking-section">
+<div class="apt-description-section">
+  <div class= "small-pictures">
+  <div class="photo1"></div>
+  <div class="photo2"></div>
+  <div class="photo3"></div>
+  <div class="photo4"></div>
+  </div>
+</div>
+<div class="booking-mask-section">
+ <h2>€36 €27/ night</h2>
+ <h3>Dec 3 - 5 is no longer available</h3>
+ <a class="btn btn-flat-show" href="#">Check availability</a>
+</div>
+</section>
+
 <div>Description</div>
 <div>Info box</div>
 </div>
