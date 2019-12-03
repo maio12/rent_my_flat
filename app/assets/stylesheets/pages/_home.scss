@@ -1,1 +1,60 @@
-// Specific CSS for your home-page
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container h1 {
+  color: #484848;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  background: #ffffff;
+  border-radius: 4px;
+  padding: 32px;
+  padding-bottom: 24px;
+  width: 441px;
+  height: 475px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+  position: relative;
+  right: 330px;
+}
+
+.btn {
+  background-color: #FF5A5F;
+  color: white;
+  margin-top: 20px;
+  padding: 10px 22px;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+  position: relative;
+  left: 275px;
+}
+
+.btn:hover {
+  color: white;
+}
+
+.homepage {
+  height: 100vh;
+  background-size: cover;
+}
+
+label {
+  color: #484848;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.form-control {
+  border: 1px solid #EBEBEB;
+  border-radius: 4px;
+  height: 48px;
+}
+
+.bar {
+  margin-bottom: 10px;
+}
