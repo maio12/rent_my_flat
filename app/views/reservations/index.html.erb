@@ -1,0 +1,10 @@
+
+<h2><%= Reservation.first.date_in%></h2>
+<h2><%= Reservation.first.date_out%></h2>
+<% Reservation.all.each do |x|  %>
+<h2><%= x.apartment.title %></h2>
+<h2><%= x.user.first_name %></h2>
+
+
+<% end %>
+
