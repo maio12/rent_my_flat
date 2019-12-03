@@ -1,2 +1,16 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
+
+
+<p>You are logged in now!</p>
+<p><%= current_user.first_name %></p>
+
+
+<p>Your apartments are:</p>
+
+ <% current_user.apartments.each do |apa| %>
+
+<p> <%= apa.title %></p>
+<p> <%= apa.address %></p>
+
+ <%end %>
