@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class ReservationsControllerTest < ActionDispatch::IntegrationTest
+
   test "should get new" do
     get reservations_new_url
     assert_response :success
@@ -10,5 +11,9 @@ class ReservationsControllerTest < ActionDispatch::IntegrationTest
     get reservations_create_url
     assert_response :success
   end
+
+  # test "the truth" do
+  #   assert true
+  # end
 
 end
