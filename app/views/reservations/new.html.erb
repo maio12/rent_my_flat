@@ -1,0 +1,8 @@
+<h1>Make your reservation</h1>
+
+<%= simple_form_for [@apartment, @reservation] do |f| %>
+
+  <%= f.input :date_in, as: :string, required: false, input_html: {class: "datepicker"}%>
+  <%= f.input :date_out, as: :string, required: false, input_html: {class: "datepicker"} %>
+  <%= f.button :submit, class: 'btn btn-primary' %>
+<% end %>
