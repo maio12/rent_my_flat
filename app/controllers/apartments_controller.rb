@@ -18,12 +18,11 @@ class ApartmentsController < ApplicationController
 
   def show
     @apartment = Apartment.find(params[:id])
+  end
 
   private
 
   def apartments_params
     params.require(:apartment).permit(:title, :address, :photo, :photo_cache)
-
-
   end
 end
