@@ -1,7 +1,0 @@
-<%= simple_form_for [@apartment, @reservation] do |f| %>
-  <%= f.label :date_in, 'Date' %>
-  <%= f.text_field :check_out, id: 'date' %>
-  <%= f.label :check_out_date, 'Date' %>
-  <%= f.text_field :check_out_date, id: 'date' %>
-  <%= f.submit "add apartment", class: "btn btn-primary" %>
-<% end %>
