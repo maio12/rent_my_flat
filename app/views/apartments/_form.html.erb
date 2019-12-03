@@ -1,0 +1,9 @@
+<%= simple_form_for(@apartment) do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :address %>
+  <%= f.text_field :address %>
+  <%= f.input :photo %>
+  <%= f.input :photo_cache, as: :hidden %>
+  <%= f.submit "add apartment", class: "btn btn-primary" %>
+<% end %>

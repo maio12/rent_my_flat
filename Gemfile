@@ -13,6 +13,8 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem 'devise'
+gem 'carrierwave', '~> 2.0'
+gem 'cloudinary'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
