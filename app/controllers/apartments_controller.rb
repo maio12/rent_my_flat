@@ -1,4 +1,5 @@
 class ApartmentsController < ApplicationController
+
   def new
     @apartment = Apartment.new
   end
@@ -15,9 +16,14 @@ class ApartmentsController < ApplicationController
     end
   end
 
+  def show
+    @apartment = Apartment.find(params[:id])
+
   private
 
   def apartments_params
     params.require(:apartment).permit(:title, :address, :photo, :photo_cache)
+
+
   end
 end
