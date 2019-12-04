@@ -1,6 +1,7 @@
-<h1>Reviews#new</h1>
-<p>Find me in app/views/reviews/new.html.erb</p>
-<%= simple_form_for [@apartment, @review] do |f| %>
+
+
+<h1>Add a review</h1>
+<%= simple_form_for [@apartment,@review], url: apartment_reviews_path(id: @apartment.id), action: :post do |f| %>
   <%= f.input :rating %>
   <%= f.text_field :content %>
   <%= f.submit "add review", class: "btn btn-primary" %>
