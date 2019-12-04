@@ -46,7 +46,7 @@
     </div>
     <hr>
     <div class="booking-mask-section">
-      <h2>€27/ night</h2>
+      <h2><%= @apartment.price %></h2>
       <p>Dec 3 - 5 is no longer available</p>
       <br>
       <div class="buttons-mask-section">
@@ -61,7 +61,15 @@
   <section class="reviews-section">
     <h2>4 (134 reviews)</h2>
     <div class="reviews-wrapper">
-      <div class="review">Was a great place to stay for a week. Definitely listen to their suggestion about height, the ceilings are quite low, but that is warned in their listing. Not a large apartment, bu… read more</div>
+
+
+      <% @apartment.reviews.each do |rev| %>
+
+        <%= rev.content %>
+        <%= rev.rating %>
+
+      <%end  %>
+
       <div class="review">this location was perfect for use of public transport to get to City center but was nicely removed from all of the chaos. Walking distance to Navigli for great atmosphere, drinks,… read more</div>
       <div class="review">So we stayed at the apartment for almost 2 weeks. And most of the stay was pretty good. There might be an issue if you are a tall person, you will have to bend all the time to prev… read more</div>
       <div class="review">Honestly one of the best Airbnb’s I have ever stayed in! The hosts were very generous and helpful and the apartment was so cute and clean! The location was great (and safe) and suc… read more</div>

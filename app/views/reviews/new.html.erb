@@ -1,7 +1,9 @@
 
 
-<h1>Add a review</h1>
-<%= simple_form_for [@apartment,@review], url: apartment_reviews_path(id: @apartment.id), action: :post do |f| %>
+<h1>Add a review for <%= @reservation.apartment.title %></h1>
+
+
+<%= simple_form_for [@reservation,@review], url: reservation_reviews_path, action: :post do |f| %>
   <%= f.input :rating %>
   <%= f.text_field :content %>
   <%= f.submit "add review", class: "btn btn-primary" %>
