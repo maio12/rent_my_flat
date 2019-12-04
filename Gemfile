@@ -15,7 +15,6 @@ gem 'webpacker'
 gem 'devise'
 gem 'carrierwave', '~> 2.0'
 gem 'cloudinary'
-gem 'pundit'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
