@@ -6,4 +6,6 @@ class Apartment < ApplicationRecord
   validates :address, presence: true
   validates :photo, presence: true
   mount_uploader :photo, PhotoUploader
+  validates :price, presence: true
+
 end
