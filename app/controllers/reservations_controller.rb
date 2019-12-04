@@ -39,7 +39,7 @@ class ReservationsController < ApplicationController
 
   def destroy
     @reservation = Reservation.find(params[:id])
-    @resertion.destroy
+    @reservation.destroy
   end
 
   def reservation_params
