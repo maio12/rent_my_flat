@@ -12,7 +12,7 @@ class ApartmentsController < ApplicationController
     @apartment.user = current_user
 
     if @apartment.save
-      redirect_to root_path
+      redirect_to apartments_path
     else
       render :new
     end
@@ -25,6 +25,6 @@ class ApartmentsController < ApplicationController
   private
 
   def apartments_params
-    params.require(:apartment).permit(:title, :address, :photo, :photo_cache)
+    params.require(:apartment).permit(:title, :address, :photo, :price, :photo_cache)
   end
 end
