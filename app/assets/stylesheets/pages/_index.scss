@@ -1,3 +1,36 @@
 // Import page-specific CSS files here.
 @import "home";
 @import "show";
+
+.card-index {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-bottom: 1px solid #EBEBEB;
+  height: 200px;
+  flex-grow: 1;
+}
+
+.card-index img {
+  height: 80%;
+  object-fit: cover;
+  margin-right: 20px;
+  border-radius: 4px;
+  margin-left: 20px;
+}
+
+.card-index-text p {
+  color: #484848
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.price {
+  margin-left: 877px;
+}
+
+.card-index .address {
+  color: rgb(180, 180, 180);
+}
