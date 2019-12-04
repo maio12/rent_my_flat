@@ -1,4 +1,5 @@
 class ReservationsController < ApplicationController
+
   before_action :set_apartment, except: [:destroy, :index]
 
   def index
