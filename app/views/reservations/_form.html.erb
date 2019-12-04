@@ -1,0 +1,5 @@
+<%= simple_form_for [@apartment, @reservation] do |f| %>
+  <%= f.input :date_in, 'data-provide' => 'datepicker' %>
+  <%= f.input :date_out, 'data-provide' => 'datepicker' %>
+  <%= f.submit :submit, class: "btn btn-primary" %>
+<% end %>

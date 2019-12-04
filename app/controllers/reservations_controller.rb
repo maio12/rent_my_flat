@@ -45,8 +45,8 @@ class ReservationsController < ApplicationController
   def reservation_params
     params.require(:reservation).permit(:date_in, :date_out, :user_id, :apartment_id)
   end
-end
 
   def set_apartment
     @apartment = Apartment.find(params[:apartment_id])
   end
+end
