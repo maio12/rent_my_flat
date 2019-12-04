@@ -3,7 +3,7 @@
           <% @apartments.each do |apartment| %>
             <%= link_to apartment_path(apartment) do %>
               <div class="card-index">
-                <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" alt="...">
+               <%= image_tag apartment.photo_url %>
                 <div class="card-index-text">
                   <p><strong><%= apartment.title %></strong></p>
                   <p class="address"> <%= apartment.address %></p>

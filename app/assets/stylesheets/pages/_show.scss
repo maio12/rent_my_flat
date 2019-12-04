@@ -39,9 +39,9 @@
 
 .main-picture {
 height: 316px;
-width: 600px;
-// width: 50vw;
-background-image: url("https://a0.muscache.com/im/pictures/75401046-31c4-48e3-93ba-591e5bd8f903.jpg");
+//width: 600px;
+width: 50vw;
+// background-image: url("https://a0.muscache.com/im/pictures/75401046-31c4-48e3-93ba-591e5bd8f903.jpg");
 background-position: center;
 background-size: cover;
 
@@ -117,12 +117,9 @@ margin: 8px;
 }
 
 .booking-mask-section {
-  position: -webkit-sticky;
   position: sticky;
   top: 0px;
   // position: absolute;top:0;right:0;
-  display: flex;
-  flex-wrap: wrap;
   width: 30%;
 }
 
