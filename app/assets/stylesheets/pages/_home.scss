@@ -2,14 +2,14 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-.container h1 {
+.box h1 {
   color: #484848;
   font-size: 30px;
   font-weight: bold;
   font-family: 'Montserrat', sans-serif;
 }
 
-.container {
+.box {
   background: #ffffff;
   border-radius: 4px;
   padding: 32px;
@@ -17,8 +17,9 @@ body {
   width: 441px;
   height: 475px;
   box-shadow: 0 16px 40px rgba(0,0,0,0.12);
-  position: relative;
-  right: 330px;
+  margin-left: 20px;
+  margin-left: 85px;
+  margin-top: 50px;
 }
 
 .btn {
