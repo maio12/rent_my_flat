@@ -27,14 +27,4 @@
   </a>
 </div> -->
 
-<p>Hi <%= current_user.first_name %> </p>
-<p>here your reservations:</p>
 
-<% current_user.reservations.each do |res| %>
-  <p><%= res.id %></p>
-
-  <p><%= res.apartment.title %></p>
-  <p>Review this reservation</p>
-  <%= link_to("Crea review", new_reservation_review_path(res))  %>
-
-<% end  %>
