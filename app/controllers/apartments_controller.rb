@@ -1,11 +1,9 @@
 class ApartmentsController < ApplicationController
-
   def new
     @apartment = Apartment.new
   end
 
   def create
-
     @apartment = Apartment.new(apartments_params)
     @apartment.user = current_user
 
