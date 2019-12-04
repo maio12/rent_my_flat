@@ -1,5 +1,6 @@
 class ReservationsController < ApplicationController
-before_action :set_apartment, except: [:index, :destroy]
+
+  before_action :set_apartment, except: [:destroy, :index]
 
   def index
     @reservations = Reservation.where(user: current_user)
