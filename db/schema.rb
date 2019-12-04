@@ -21,8 +21,8 @@ ActiveRecord::Schema.define(version: 2019_12_03_202625) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "price"
     t.string "photo"
+    t.string "price"
     t.index ["user_id"], name: "index_apartments_on_user_id"
   end
 
