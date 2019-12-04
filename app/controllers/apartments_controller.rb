@@ -12,7 +12,7 @@ class ApartmentsController < ApplicationController
     @apartment.user = current_user
 
     if @apartment.save
-      redirect_to apartments_path
+      redirect_to apartments_path, notice: 'Apartment was successfully added.'
     else
       render :new
     end

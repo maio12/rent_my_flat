@@ -13,10 +13,6 @@
   <body>
     <% unless current_page? root_path %>
       <%= render 'pages/navbar_white' %>
-    <ul class="hmenu">
-    <%= render 'devise/shared/registration_items' %>
-    <%= render 'devise/shared/login_items' %>
-  </ul>
     <% end %>
 
     <%= yield %>
