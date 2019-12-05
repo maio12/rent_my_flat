@@ -1,7 +1,6 @@
 class Review < ApplicationRecord
   belongs_to :reservation
   RATINGS = [
-    0,
     1,
     2,
     3,
