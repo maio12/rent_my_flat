@@ -7,8 +7,8 @@ class ApartmentsController < ApplicationController
       {
         lat: apartment.latitude,
         lng: apartment.longitude,
-        infoWindow: render_to_string(partial: "info_window", locals: { apartment: apartment }),
-        image_url: helpers.asset_url('REPLACE_THIS_WITH_YOUR_IMAGE_IN_ASSETS')
+        infoWindow: render_to_string(partial: "info_window", locals: { apartment: apartment })
+        #image_url: helpers.asset_url('REPLACE_THIS_WITH_YOUR_IMAGE_IN_ASSETS')
       }
     end
   end
@@ -30,6 +30,15 @@ class ApartmentsController < ApplicationController
 
   def show
     @apartment = Apartment.find(params[:id])
+
+    @apartment_geocoded = Apartment.geocoded
+
+    @markers = {
+        lat: @apartment_geocoded[0].latitude,
+        lng: @apartment_geocoded[0].longitude,
+        infoWindow: render_to_string(partial: "info_window_show", locals: { apartment: @apartment_geocoded })
+
+    }
   end
 
   private
