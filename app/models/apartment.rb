@@ -7,10 +7,4 @@ class Apartment < ApplicationRecord
   validates :photo, presence: true
   mount_uploader :photo, PhotoUploader
   validates :price, presence: true
-<<<<<<< HEAD
-
-=======
-  validates :photo, presence: true
-  mount_uploader :photo, PhotoUploader
->>>>>>> master
 end
