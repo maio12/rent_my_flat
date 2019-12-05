@@ -24,15 +24,16 @@ antonio.save!
 
 photos = Scraper.api_apartments_photos
 address = Scraper.api_apartments_address
+city = Scraper.api_apartments_city
 
-greg_apart1 = Apartment.new(title: "Beautiful apartment in Pittsburg", address: address.sample, price: "500$/night", user: gregory, city: "Rome")
+greg_apart1 = Apartment.new(title: "Beautiful apartment in Pittsburg", address: address.sample, price: "500$/night", user: gregory, city: city.sample)
 greg_apart1.remote_photo_url = photos.sample
 greg_apart1.save!
-greg_apart2 = Apartment.new(title: "Beautiful apartment in Columbus", address: address.sample, price: "550$/night", user: gregory, photo: Scraper.api_apartments_photos.sample, city: "Milan", remote_photo_url: photos.sample)
+greg_apart2 = Apartment.new(title: "Beautiful apartment in Columbus", address: address.sample, price: "550$/night", user: gregory, photo: Scraper.api_apartments_photos.sample, city: city.sample, remote_photo_url: photos.sample)
 greg_apart2.save!
-gin_apart1 =Apartment.new(title: "Beautiful apartment in London", address: address.sample, price: "800$/night", user: ginevra, photo: Scraper.api_apartments_photos.sample, city: "Bologna", remote_photo_url: photos.sample)
+gin_apart1 =Apartment.new(title: "Beautiful apartment in London", address: address.sample, price: "800$/night", user: ginevra, photo: Scraper.api_apartments_photos.sample, city: city.sample, remote_photo_url: photos.sample)
 gin_apart1.save!
-gin_apart2 =Apartment.new(title: "Beautiful apartment in Rome", address: address.sample, price: "600$/night", user: ginevra, photo: Scraper.api_apartments_photos.sample, city: "Venezia", remote_photo_url: photos.sample)
+gin_apart2 =Apartment.new(title: "Beautiful apartment in Rome", address: address.sample, price: "600$/night", user: ginevra, photo: Scraper.api_apartments_photos.sample, city: city.sample, remote_photo_url: photos.sample)
 gin_apart2.save!
 
 gin_in_greg_apart = Reservation.create(date_in: "02/05/2020", date_out: "10/05/2020", apartment: greg_apart1, user: ginevra)

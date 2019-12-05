@@ -26,7 +26,27 @@ array = []
 
    hash.each do |el|
     el[1].each do |value|
-      array << value["address1"] + ' ' + value["city"] unless value["address1"].nil? || value["city"].nil?
+      array << value["address1"] unless value["address1"].nil?
+        # array << element
+         # if value["address1"].nil?
+         #  array << value
+         #  else
+         #  array << value["address1"]
+         #   end
+        end
+    end
+  return array
+end
+
+def self.api_apartments_city
+url_city = "https://raw.githubusercontent.com/EthanRBrown/rrad/master/addresses-us-100.json"
+response_city = HTTParty.get(url_city)
+array = []
+   hash = JSON.parse(response_city)
+
+   hash.each do |el|
+    el[1].each do |value|
+      array << value["city"] unless value["city"].nil?
         # array << element
          # if value["address1"].nil?
          #  array << value
