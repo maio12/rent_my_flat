@@ -11,6 +11,13 @@ class ApartmentsController < ApplicationController
         #image_url: helpers.asset_url('REPLACE_THIS_WITH_YOUR_IMAGE_IN_ASSETS')
       }
     end
+
+    if params[:query].present?
+      sql_query = "address ILIKE :query OR title ILIKE :query"
+       @apartments = Apartment.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @apartments = Apartment.all
+    end
   end
 
   def new
