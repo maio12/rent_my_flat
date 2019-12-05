@@ -7,6 +7,6 @@ class Review < ApplicationRecord
     4,
     5
   ]
-  validates :rating, presence: true, numericality: { only_integer: true }, inclusion: { in: RATINGS }
   validates :content, presence: true
+  validates :rating, numericality: { only_integer: true }, inclusion: { in: RATINGS }
 end
