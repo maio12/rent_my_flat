@@ -3,7 +3,11 @@
           <% @apartments.each do |apartment| %>
             <%= link_to apartment_path(apartment) do %>
               <div class="card-index">
+<<<<<<< HEAD
                 <%= image_tag apartment.photo_url %>
+=======
+               <%= image_tag apartment.photo_url %>
+>>>>>>> master
                 <div class="card-index-text">
                   <p><strong><%= apartment.title %></strong></p>
                   <p class="address"> <%= apartment.address %></p>
