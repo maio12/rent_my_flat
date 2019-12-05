@@ -56,6 +56,11 @@ margin-right: 74px;
 
 }
 
+img {
+  max-width: 100%;
+  max-height: 300px;
+}
+
 .small-pictures {
   display: flex;
   width: 50%;
@@ -104,9 +109,7 @@ margin: 8px;
 .description-and-booking-section {
   margin-top: 24px;
   display: flex;
-  align-items: center;
   align-content: space-between;
-  position: relative;
   margin-left: 74px;
   margin-right: 74px;
 }
@@ -119,8 +122,8 @@ margin: 8px;
 .booking-mask-section {
   position: sticky;
   top: 0px;
-  // position: absolute;top:0;right:0;
   width: 30%;
+  height: 200px;
 }
 
 .btn-flat-show {
@@ -143,6 +146,11 @@ margin: 8px;
 }
 
 .buttons-mask-section {
+  color: #4A4A4A;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #DC0F62;
+  transition: background 0.3s ease;
 
 }
 
