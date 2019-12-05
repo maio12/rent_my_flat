@@ -4,11 +4,9 @@ class ApartmentsController < ApplicationController
     @apartments = Apartment.geocoded
     if params[:query].present?
       sql_query = "address ILIKE :query OR title ILIKE :query"
-       @apartments = Apartment.where(sql_query, query: "%#{params[:query]}%")
+      @apartments = Apartment.where(sql_query, query: "%#{params[:query]}%")
     else
       @apartments = Apartment.all
-
-
       @markers = @apartments.map do |apartment|
         {
           lat: apartment.latitude,
@@ -37,6 +35,15 @@ class ApartmentsController < ApplicationController
 
   def show
     @apartment = Apartment.find(params[:id])
+
+    @apartment_geocoded = Apartment.geocoded
+
+    @markers = {
+        lat: @apartment_geocoded[0].latitude,
+        lng: @apartment_geocoded[0].longitude,
+        infoWindow: render_to_string(partial: "info_window_show", locals: { apartment: @apartment_geocoded })
+
+    }
   end
 
   private
