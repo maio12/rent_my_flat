@@ -7,7 +7,6 @@ class ApartmentsController < ApplicationController
        @apartments = Apartment.where(sql_query, query: "%#{params[:query]}%")
     else
       @apartments = Apartment.all
-    
 
     @markers = @apartments.map do |apartment|
       {
@@ -16,6 +15,7 @@ class ApartmentsController < ApplicationController
         infoWindow: render_to_string(partial: "info_window", locals: { apartment: apartment })
         #image_url: helpers.asset_url('REPLACE_THIS_WITH_YOUR_IMAGE_IN_ASSETS')
       }
+    end
     end
   end
 
