@@ -2,6 +2,12 @@ class ApartmentsController < ApplicationController
   def index
     @apartments = Apartment.all
     @apartments = Apartment.geocoded
+    if params[:query].present?
+      sql_query = "address ILIKE :query OR title ILIKE :query"
+       @apartments = Apartment.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @apartments = Apartment.all
+    
 
     @markers = @apartments.map do |apartment|
       {
@@ -44,6 +50,6 @@ class ApartmentsController < ApplicationController
   private
 
   def apartments_params
-    params.require(:apartment).permit(:title, :address, :photo, :price, :photo_cache)
+    params.require(:apartment).permit(:title, :address, :city, :photo, :price, :photo_cache)
   end
 end
