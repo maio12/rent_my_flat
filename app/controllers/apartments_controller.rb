@@ -1,8 +1,7 @@
 class ApartmentsController < ApplicationController
   def index
     @apartments = Apartment.all
-    @apartments = Apartment.geocoded
-
+    #@apartments = Apartment.geocoded
     @markers = @apartments.map do |apartment|
       {
         lat: apartment.latitude,
