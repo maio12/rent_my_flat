@@ -7,4 +7,11 @@ class Apartment < ApplicationRecord
   validates :price, presence: true
   validates :photo, presence: true
   mount_uploader :photo, PhotoUploader
+  include PgSearch::Model
+  pg_search_scope :search_by_address_and_title,
+    against: [:address, :title],
+    using: {
+      tsearch: { prefix: true } # <-- now `superman batm` will return something!
+    }
 end
+
