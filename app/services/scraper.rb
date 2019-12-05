@@ -25,17 +25,17 @@ array = []
    hash = JSON.parse(response_address)
 
    hash.each do |el|
-      el[1].each do |value|
-          element = value["address1"] + ' ' + value["city"]
-          array << element
+    el[1].each do |value|
+      array << value["address1"] + ' ' + value["city"] unless value["address1"].nil? || value["city"].nil?
+        # array << element
          # if value["address1"].nil?
          #  array << value
          #  else
          #  array << value["address1"]
          #   end
-      end
-  end
-     p array.sample
+        end
+    end
+  return array
 end
 
 def self.api_apartments_photos
@@ -51,7 +51,6 @@ end
 
 end
 
-Scraper.api_apartments_address
 
 
 
