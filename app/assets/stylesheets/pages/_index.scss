@@ -9,7 +9,6 @@
   border-bottom: 1px solid #EBEBEB;
   height: 228px;
   flex-grow: 1;
-
 }
 
 .card-index img {
@@ -34,12 +33,12 @@ a:hover {
 }
 
 .price-supremo {
-  width: 90%;
+  width: 97%;
 }
 
 .price {
   text-align: right;
-  margin-right: 60px;
+  margin-right: 10px;
 }
 
 .card-index .address {
@@ -48,4 +47,14 @@ a:hover {
 
 .card-index .city {
   color: rgb(180, 180, 180);
+}
+
+.form-index {
+  display: flex;
+  padding: 50px;
+}
+
+.btn-index {
+  left: 0 !important;
+  margin-top: 0 !important;
 }
