@@ -4,12 +4,7 @@
 
 
 <%= simple_form_for [@reservation,@review], url: reservation_reviews_path, action: :post do |f| %>
-<<<<<<< HEAD
-  <%= f.input :rating %>
-   <%= f.input :rating, collection: Review::RATINGS %>
-=======
   <%= f.input :rating, as: :select, collection: Review::RATINGS %>
   <%= f.text_field :content %>
->>>>>>> master
   <%= f.submit "add review", class: "btn btn-primary" %>
 <% end %>
