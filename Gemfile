@@ -15,9 +15,12 @@ gem 'webpacker'
 gem 'devise'
 gem 'carrierwave', '~> 2.0'
 gem 'cloudinary'
+gem 'pundit'
 gem 'geocoder'
 gem 'pg_search', '~> 2.3.0'
-gem 'pundit'
+gem 'httparty'
+
+
 
 group :development do
   gem 'web-console', '>= 3.3.0'
