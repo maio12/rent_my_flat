@@ -2,6 +2,8 @@ class ApartmentsController < ApplicationController
   def index
     @apartments = Apartment.geocoded
     if params[:query].present?
+
+      # Apartment.near(params[:query], 100)
       sql_query = "address ILIKE :query OR title ILIKE :query"
       @apartments = Apartment.where(sql_query, query: "%#{params[:query]}%")
     else
