@@ -2,75 +2,72 @@
   <h3><%= @apartment.title %></h3>
   <p><%= "#{@apartment.address}, #{@apartment.city}" %></p>
 </div>
+
 <div class="show-img">
   <%= image_tag @apartment.photo_url %>
 </div>
 
-
-<!-- <div class='container d-flex justify-content: flex-start'>
-  <div class="card-product">
-    <h1 class="show-title"><%= @apartment.title %></h1>
-    <section class= "pictures-section">
-      <div class="main-picture"><%= image_tag @apartment.photo_url %></div>
-      <div class= "small-pictures">
-        <div class="photo1"></div>
-        <div class="photo2"></div>
-        <div class="photo3"></div>
-        <div class="photo4"></div>
+<div class="show-info">
+  <div class="show-text">
+    <div class="show-info1">
+      <p class="lodge"> <%= "Private apartment hosted by #{@apartment.user.first_name}" %></p>
+      <p> 6 guests · 3 bedrooms · 3 beds </p>
+    </div>
+    <div class="show-info2">
+      <div class="show-info-specs">
+        <p class="show-info-black"><i class="fas fa-home"></i>Great check-in experience</p>
+        <p class="show-info-grey">100% of recent guests gave the check-in process a 5-star rating.</p>
       </div>
-    </section>
-    <section class= "description-and-booking-section">
-      <div class="apt-description-section">
-        <p><strong>Entire apartment hosted by Marco & Abu</strong></p>
-        <p>2 guests · 1 bedroom · 1 bed · 1 bath</>
-          <hr>
-          <p>Entire home</p>
-          <p>You’ll have the apartment to yourself.</p>
-          <p>Sparkling clean</p>
-          <p>10 recent guests said this place was sparkling clean.</p>
-          <p>Entire home</p>
-          <p>You’ll have the apartment to yourself.</p>
-          <p>Sparkling clean</p>
-          <p>10 recent guests said this place was sparkling clean.</p>
-          <hr>
-          <p>CHIC & QUIET APARTMENT. Located within the hip and trendy Navigli area, this house is being named as La Casa Segreta for its cozy and intimate one-bedroom apartment perched in the attic of an 1910’s historic residential building which till recently served as the private sanctuary of the hosts</p>
-          <br>
-          <p>Any questions for the host?</p>
-          <a class="btn btn-ghost-show" href="#">Contact host</a>
-          <hr>
-          <p>Sleeping arrangments</p>
-          <a class="btn btn-ghost-show" href="#">1 double bed</a>
-          <br>
-          <hr>
-          <h2>Amenities</h2>
-          <div class="amenities-wrapper">
-            <div>Hair dryer</div>
-            <div>Wifi</div>
-            <div>Iron</div>
-            <div>Laptop friendly workspace</div>
-            <div>Washer</div>
-          </div>
-        </div>
-        <hr> -->
-<!--         <div class="booking-mask-section">
-          <h2><%= @apartment.price %></h2>
-          <br>
-          <div class="buttons-mask-section">
-            <%= #link_to "Reserve", new_apartment_reservation_path(@apartment) %>
-          </div>
-        </div>
-      </section>
-      <hr> -->
-
-      <h2>Reviews</h2>
-      <div class="reviews-wrapper">
-        <% @apartment.reviews.each #do |rev| %>
-        <p><%= #{}"Rating: #{rev.rating} stars" %></p>
-        <br>
-        <p><%= #{}"Comment: #{rev.content}" %></p>
-        <%#end  %>
+      <div class="show-info-specs">
+        <p class="show-info-black"><i class="fas fa-comments"></i>Great communication</p>
+        <p class="show-info-grey">100% of recent guests rated Ahmed 5-star in communication.</p>
       </div>
-<hr>
+      <div class="show-info-specs">
+        <p class="show-info-black"><i class="fas fa-heart"></i>Outstanding hospitality</p>
+        <p class="show-info-grey">9 recent guests complimented Ahmed for outstanding hospitality.</p>
+      </div>
+    </div>
+    <div class="show-info-cards">
+      <div class="show-info-card">
+        <div class="show-content">
+          <i class="fas fa-bed"></i>
+          <p class="show-info-bold">Bedroom 1</p>
+          <p>1 double bed</p>
+        </div>
+      </div>
+      <div class="show-info-card">
+        <div class="show-content">
+          <i class="fas fa-bed"></i>
+          <p class="show-info-bold">Bedroom 2</p>
+          <p>1 double bed</p>
+        </div>
+      </div>
+      <div class="show-info-card">
+        <div class="show-content">
+          <i class="fas fa-bed"></i>
+          <p class="show-info-bold">Bedroom 3</p>
+          <p>1 double bed</p>
+        </div>
+      </div>
+    </div>
+     <div class= "show-info-reviews">
+      <h3>Reviews</h3>
+      <% @apartment.reviews.each do |rev| %>
+        <p>Rating</p>
+        <% rev.rating.times do %>
+         <i class="fas fa-star"></i>
+         <% end %>
+        <p>Comment</p>
+        <p><%= rev.content %></p>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="show-price">
+    <p><%= @apartment.price %></p>
+    <%= link_to "Reserve", new_apartment_reservation_path(@apartment) , class: "btn-book btn-primary" %>
+  </div>
+</div>
 
 <div
   id="map"
