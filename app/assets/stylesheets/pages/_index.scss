@@ -7,12 +7,15 @@
   align-items: center;
   background-color: white;
   border-bottom: 1px solid #EBEBEB;
-  height: 200px;
+  height: 228px;
   flex-grow: 1;
+  width: 757px;
+  margin-right: 10px;
 }
 
 .card-index img {
-  height: 80%;
+  height: 200px;
+  width: 300px;
   object-fit: cover;
   margin-right: 20px;
   border-radius: 4px;
@@ -23,14 +26,37 @@
   color: #484848
 }
 
+.card-index-text {
+  width: 100%;
+}
+
 a:hover {
   text-decoration: none;
 }
 
+.price-supremo {
+  width: 97%;
+}
+
 .price {
-  margin-left: 877px;
+  text-align: right;
+  margin-right: 10px;
 }
 
 .card-index .address {
   color: rgb(180, 180, 180);
+}
+
+.card-index .city {
+  color: rgb(180, 180, 180);
+}
+
+.form-index {
+  display: flex;
+  padding: 50px;
+}
+
+.btn-index {
+  left: 0 !important;
+  margin-top: 0 !important;
 }

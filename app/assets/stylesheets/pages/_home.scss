@@ -35,9 +35,18 @@ body {
   left: 275px;
 }
 
-.btn:hover {
-  color: white;
+.btn-primary {
+  border-color: #FF5A5F;
 }
+
+.btn-primary:hover {
+  background-color: #FF5A5F;
+  border-color: #FF5A5F;
+}
+
+// .btn:hover {
+//   color: white;
+// }
 
 .homepage {
   height: 100vh;
