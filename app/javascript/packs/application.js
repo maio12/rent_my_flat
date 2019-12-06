@@ -4,7 +4,7 @@ import { initUpdateNavbarOnScroll } from '../components/navbar';
 initUpdateNavbarOnScroll();
 
 // CSS
-import ‘mapbox-gl/dist/mapbox-gl.css’;
+import 'mapbox-gl/dist/mapbox-gl.css';
 // internal imports
-import { initMapbox } from ‘../init_mapbox’;
+import { initMapbox } from '../init_mapbox';
 initMapbox();
