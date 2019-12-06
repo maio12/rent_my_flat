@@ -1,196 +1,316 @@
-.places-to-stay-section-cards-wrapper {
+body {
+  background-color: white;
+}
+
+.show-start {
+  margin: 25px;
+  margin-left: 70px;
+}
+
+.show-start h3 {
+  font-size: 23px;
+}
+
+.show-start p {
+  color: #484848;
+  font-size: 15px;
+}
+
+.show-img img {
+  height: 300px;
+  width: 560px;
+  object-fit: cover;
+  margin-left: 70px;
+  margin-bottom: 28px;
+  border-radius: 2px;
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
+}
+
+.show-info2 {
+  margin-bottom: 28px;
+  margin-left: 70px;
+  border-bottom: 1px solid #EBEBEB;
+  padding-bottom: 20px;
+}
+
+.show-info2 .show-info-specs .show-info-grey {
+  color: #484848;
+  margin-left: 31px;
+}
+
+.show-info2 .show-info-specs .show-info-black {
+  color: black;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.fa-home:before {
+  margin-right: 10px;
+}
+
+.fa-comments:before {
+  margin-right: 10px;
+}
+
+.fa-heart:before {
+  margin-right: 10px;
+}
+
+.show-info1 {
+  margin-bottom: 28px;
+  margin-left: 70px;
+  border-bottom: 1px solid #EBEBEB;
+  padding-bottom: 20px;
+}
+
+.show-info1 p {
+  color: #484848;
+  font-size: 15px;
+}
+
+.show-info1 .lodge {
+  color: black;
+  font-weight: bold;
+}
+
+.show-info-cards {
+  margin-bottom: 28px;
+  margin-left: 70px;
+  border-bottom: 1px solid #EBEBEB;
+  padding-bottom: 20px;
+}
+
+.show-info-cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
 }
 
-
-.reviews-wrapper {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+.show-info-card {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  padding-top: 49px;
+  border: 1px solid #EBEBEB;
+  border-radius: 6px;
 }
 
-.amenities-wrapper {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+.show-content {
+  margin-left: 25px;
 }
 
-.calendar-wrapper {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.things-to-know-wrapper {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.reviews-section {
-  margin-top: 20px;
-  margin-left: 74px;
-  margin-right: 74px;
-}
-
-.review {
-  margin-left: 8px;
-  margin-right: 40px;
+.show-info-cards .show-info-card .show-info-bold {
+  font-weight: bold;
   margin-top: 16px;
 }
 
-.main-picture {
-height: 316px;
-//width: 600px;
-width: 50vw;
-// background-image: url("https://a0.muscache.com/im/pictures/75401046-31c4-48e3-93ba-591e5bd8f903.jpg");
-background-position: center;
-background-size: cover;
-
-}
-
-.pictures-section {
-display: flex;
-align-items: center;
-align-content: space-between;
-margin-left: 74px;
-margin-right: 74px;
-
-}
-
-img {
-  max-width: 100%;
-  max-height: 300px;
-}
-
-.small-pictures {
+.show-info {
   display: flex;
-  width: 50%;
-  flex-wrap: wrap;
 }
 
-.small-pictures > div {
-   flex: 1 1 150px;
+.btn-book {
+  background-color: #FF5A5F;
+    color: white;
+    margin-top: 20px;
+    padding: 10px 22px;
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: bold;
 }
 
-.photo1 {
-  height: 150px;
-  width: 300px;
-  margin: 8px;
-
-  background-color: red;
-}
-
-.photo2 {
-
- height: 150px;
-  width: 300px;
-margin: 8px;
-  background-color: black;
-}
+// .places-to-stay-section-cards-wrapper {
+//   display: grid;
+//   grid-template-columns: 1fr 1fr 1fr 1fr;
+//   grid-gap: 16px;
+// }
 
 
-.photo3 {
- height: 150px;
- width: 300px;
-margin: 8px;
-  background-color: green;
-}
+// .reviews-wrapper {
+//   display: grid;
+//   grid-template-columns: repeat(2, 1fr);
+// }
 
-.photo4 {
-height: 150px;
-  width: 300px;
-margin: 8px;
-  background-color: blue;
-}
+// .amenities-wrapper {
+//   display: grid;
+//   grid-template-columns: repeat(2, 1fr);
+// }
 
-.show-title {
- margin-left: 74px;
-}
+// .calendar-wrapper {
+//   display: grid;
+//   grid-template-columns: repeat(2, 1fr);
+// }
 
-.description-and-booking-section {
-  margin-top: 24px;
-  display: flex;
-  align-content: space-between;
-  margin-left: 74px;
-  margin-right: 74px;
-}
+// .things-to-know-wrapper {
+//   display: grid;
+//   grid-template-columns: repeat(2, 1fr);
+// }
 
-.apt-description-section {
-  width: 600px;
-  margin-left: 20px;
-}
+// .reviews-section {
+//   margin-top: 20px;
+//   margin-left: 74px;
+//   margin-right: 74px;
+// }
 
-.booking-mask-section {
-  position: sticky;
-  top: 0px;
-  width: 30%;
-  height: 200px;
-}
+// .review {
+//   margin-left: 8px;
+//   margin-right: 40px;
+//   margin-top: 16px;
+// }
 
-.btn-flat-show {
-  color: white;
-  padding: 8px 24px;
-  border-radius: 4px;
-  background: #1EDD88;
-  transition: background 0.3s ease;
-}
+// .main-picture {
+// height: 316px;
+// //width: 600px;
+// width: 50vw;
+// // background-image: url("https://a0.muscache.com/im/pictures/75401046-31c4-48e3-93ba-591e5bd8f903.jpg");
+// background-position: center;
+// background-size: cover;
 
-.btn-ghost-show {
-  color: #4A4A4A;
-  border: 1px solid #4A4A4A;
-  padding: 8px 24px;
-  border-radius: 50px;
-  font-weight: lighter;
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
-  position: absolute;
-}
+// }
 
-.buttons-mask-section {
-  color: #4A4A4A;
-  padding: 8px 24px;
-  border-radius: 4px;
-  background: #DC0F62;
-  transition: background 0.3s ease;
+// .pictures-section {
+// display: flex;
+// align-items: center;
+// align-content: space-between;
+// margin-left: 74px;
+// margin-right: 74px;
 
-}
+// }
 
-.map-section {
-  margin-left: 74px;
-  margin-right: 74px;
-  display: flex;
-  justify-content: space-around;
-  height: 400px;
-  width: 100%;
-  // width: 50vw;
-  background-image: url("https://a0.muscache.com/im/pictures/75401046-31c4-48e3-93ba-591e5bd8f903.jpg");
-  background-position: center;
-  background-size: cover;
-}
+// img {
+//   max-width: 100%;
+//   max-height: 300px;
+// }
 
-.calendar-section {
-  margin-left: 74px;
-  margin-right: 74px;
-  display: flex;
-  justify-content: space-around;
-  height: 360px;
-  width: 100%;
-}
+// .small-pictures {
+//   display: flex;
+//   width: 50%;
+//   flex-wrap: wrap;
+// }
 
-.things-to-know-section {
-  margin-left: 74px;
-  margin-right: 74px;
-  display: flex;
-  justify-content: space-around;
-  height: 360px;
-  width: 100%;
-}
+// .small-pictures > div {
+//    flex: 1 1 150px;
+// }
 
-.more-places-to-stay-section {
-  margin-left: 74px;
-  margin-right: 74px;
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  height: 200px;
+// .photo1 {
+//   height: 150px;
+//   width: 300px;
+//   margin: 8px;
 
-}
+//   background-color: red;
+// }
+
+// .photo2 {
+
+//  height: 150px;
+//   width: 300px;
+// margin: 8px;
+//   background-color: black;
+// }
+
+
+// .photo3 {
+//  height: 150px;
+//  width: 300px;
+// margin: 8px;
+//   background-color: green;
+// }
+
+// .photo4 {
+// height: 150px;
+//   width: 300px;
+// margin: 8px;
+//   background-color: blue;
+// }
+
+// .show-title {
+//  margin-left: 74px;
+// }
+
+// .description-and-booking-section {
+//   margin-top: 24px;
+//   display: flex;
+//   align-content: space-between;
+//   margin-left: 74px;
+//   margin-right: 74px;
+// }
+
+// .apt-description-section {
+//   width: 600px;
+//   margin-left: 20px;
+// }
+
+// .booking-mask-section {
+//   position: sticky;
+//   top: 0px;
+//   width: 30%;
+//   height: 200px;
+// }
+
+// .btn-flat-show {
+//   color: white;
+//   padding: 8px 24px;
+//   border-radius: 4px;
+//   background: #1EDD88;
+//   transition: background 0.3s ease;
+// }
+
+// .btn-ghost-show {
+//   color: #4A4A4A;
+//   border: 1px solid #4A4A4A;
+//   padding: 8px 24px;
+//   border-radius: 50px;
+//   font-weight: lighter;
+//   opacity: 0.6;
+//   transition: opacity 0.3s ease;
+//   position: absolute;
+// }
+
+// .buttons-mask-section {
+//   color: #4A4A4A;
+//   padding: 8px 24px;
+//   border-radius: 4px;
+//   background: #DC0F62;
+//   transition: background 0.3s ease;
+
+// }
+
+// .map-section {
+//   margin-left: 74px;
+//   margin-right: 74px;
+//   display: flex;
+//   justify-content: space-around;
+//   height: 400px;
+//   width: 100%;
+//   // width: 50vw;
+//   background-image: url("https://a0.muscache.com/im/pictures/75401046-31c4-48e3-93ba-591e5bd8f903.jpg");
+//   background-position: center;
+//   background-size: cover;
+// }
+
+// .calendar-section {
+//   margin-left: 74px;
+//   margin-right: 74px;
+//   display: flex;
+//   justify-content: space-around;
+//   height: 360px;
+//   width: 100%;
+// }
+
+// .things-to-know-section {
+//   margin-left: 74px;
+//   margin-right: 74px;
+//   display: flex;
+//   justify-content: space-around;
+//   height: 360px;
+//   width: 100%;
+// }
+
+// .more-places-to-stay-section {
+//   margin-left: 74px;
+//   margin-right: 74px;
+//   display: flex;
+//   justify-content: space-around;
+//   width: 100%;
+//   height: 200px;
+
+// }

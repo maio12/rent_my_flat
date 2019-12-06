@@ -1,9 +1,10 @@
-require 'availabilty_validator'
+
+
 class Reservation < ApplicationRecord
   belongs_to :user
   belongs_to :apartment
   has_one :review
-  validates :date_in, :date_out, presence: true, availability: true
+  # validates :date_in, :date_out, presence: true, availability: true
   validate :date_out_after_date_in
 
  private
