@@ -21,6 +21,7 @@ gem 'pg_search', '~> 2.3.0'
 gem 'httparty'
 
 
+
 group :development do
   gem 'web-console', '>= 3.3.0'
 end
