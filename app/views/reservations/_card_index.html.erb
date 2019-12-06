@@ -1,0 +1,22 @@
+
+  <div class="card-index-supremo mb-3">
+          <% @reservations.each do |x| %>
+              <div class="card-index">
+                <%= image_tag x.apartment.photo_url %>
+                <div class="card-index-text">
+                  <p><strong><%= x.apartment.title %></strong></p>
+                  <p class="address"> <%= x.apartment.address %></p>
+                  <p class="city"> <%= x.apartment.city %></p>
+                  <br>
+                  <p class="reserveddates"> <%= x.date_in %> through <%= x.date_out %></p>
+                  <br>
+                  <p>Review this Reservation</p>
+
+                </div>
+              </div>
+            <% end %>
+             <%= link_to("Create review", new_reservation_review_path(x))  %>
+  </div>
+
+
+

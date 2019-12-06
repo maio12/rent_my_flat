@@ -2,7 +2,6 @@ require "nokogiri"
 require "httparty"
 require "json"
 
-
 class Scraper
 
   # def self.scraping_apartments(city, country)
