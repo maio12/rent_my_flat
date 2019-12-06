@@ -1,8 +1,3 @@
-<%= form_tag apartments_path, method: :get, class: "form-index" do %>
-  <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Find a location" %>
-  <%= submit_tag "Search", class: "btn btn-primary btn-index" %>
-<% end %>
-
 
 <div class="card-index-supremo mb-3">
           <% @apartments.each do |apartment| %>

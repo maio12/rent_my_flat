@@ -1,11 +1,16 @@
-<%= render 'pages/card_index' %>
-<div
-  id="map"
-  style="width: 50%;
-  height: 600px; object-position: center;"
-  data-markers="<%= @markers.to_json %>"
-  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-></div>
+
+<%= render 'pages/form' %>
+
+  <div class="map-cards">
+    <%= render 'pages/card_index' %>
+    <div
+      id="map"
+      style="width: 50%;
+      height: 600px; object-position: center;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+    ></div>
+  </div>
 
 <!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">

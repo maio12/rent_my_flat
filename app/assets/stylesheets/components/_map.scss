@@ -6,3 +6,13 @@
   text-align: center;
   font-family: 'Open Sans', sans-serif;
 }
+
+#map {
+  height: 700px;
+  position: sticky;
+  top: 0;
+}
+
+.map-cards {
+  display: flex;
+}
