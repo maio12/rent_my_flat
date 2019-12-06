@@ -5,7 +5,7 @@ class Apartment < ApplicationRecord
   validates :title, presence: true
   validates :city, presence: true
   validates :address, presence: true
-  validates :photo, presence: true
+  # validates :photo, presence: true
   mount_uploader :photo, PhotoUploader
   validates :price, presence: true
   geocoded_by :address
