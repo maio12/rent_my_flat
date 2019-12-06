@@ -56,7 +56,7 @@
           <h2><%= @apartment.price %></h2>
           <br>
           <div class="buttons-mask-section">
-            <%= link_to "Reserve", new_apartment_reservation_path(@apartment) %>
+            <%= #link_to "Reserve", new_apartment_reservation_path(@apartment) %>
           </div>
         </div>
       </section>
@@ -64,11 +64,11 @@
 
       <h2>Reviews</h2>
       <div class="reviews-wrapper">
-        <% @apartment.reviews.each do |rev| %>
-        <p><%= "Rating: #{rev.rating} stars" %></p>
+        <% @apartment.reviews.each #do |rev| %>
+        <p><%= #{}"Rating: #{rev.rating} stars" %></p>
         <br>
-        <p><%= "Comment: #{rev.content}" %></p>
-        <%end  %>
+        <p><%= #{}"Comment: #{rev.content}" %></p>
+        <%#end  %>
       </div>
 <hr> -->
 
