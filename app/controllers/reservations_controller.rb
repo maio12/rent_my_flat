@@ -19,7 +19,7 @@ class ReservationsController < ApplicationController
     @reservation.user = current_user
 
     if @reservation.save
-      redirect_to apartment_path(@apartment), notice: 'Reservation was successfully created.'
+      redirect_to reservations_path, notice: 'Reservation was successfully created.'
     else
       render :new
     end
