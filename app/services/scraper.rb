@@ -26,7 +26,7 @@ array = []
 
    hash.each do |el|
     el[1].each do |value|
-      array << value["address1"] + ", " + value["city"] unless value["address1"].nil? || value["city"].nil?
+      array << [value["address1"] + ", " + value["city"], value["city"]] unless value["address1"].nil? || value["city"].nil?
         # array << element
          # if value["address1"].nil?
          #  array << value
