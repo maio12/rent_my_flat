@@ -1,13 +1,12 @@
 class ApartmentsController < ApplicationController
   def index
-    @apartments = Apartment.all
     @apartments = Apartment.geocoded
     if params[:query].present?
       sql_query = "address ILIKE :query OR title ILIKE :query"
-       @apartments = Apartment.where(sql_query, query: "%#{params[:query]}%")
+      @apartments = Apartment.where(sql_query, query: "%#{params[:query]}%")
     else
-      @apartments = Apartment.all
-
+      @apartments = Apartment.geocoded
+    end
       @markers = @apartments.map do |apartment|
         {
           lat: apartment.latitude,
@@ -15,7 +14,7 @@ class ApartmentsController < ApplicationController
           infoWindow: render_to_string(partial: "info_window", locals: { apartment: apartment })
           #image_url: helpers.asset_url('REPLACE_THIS_WITH_YOUR_IMAGE_IN_ASSETS')
         }
-      end
+          # image_url: helpers.asset_url('REPLACE_THIS_WITH_YOUR_IMAGE_IN_ASSETS')
     end
   end
 
