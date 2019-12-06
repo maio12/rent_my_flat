@@ -8,14 +8,14 @@ class ApartmentsController < ApplicationController
     else
       @apartments = Apartment.all
 
-    @markers = @apartments.map do |apartment|
-      {
-        lat: apartment.latitude,
-        lng: apartment.longitude,
-        infoWindow: render_to_string(partial: "info_window", locals: { apartment: apartment })
-        #image_url: helpers.asset_url('REPLACE_THIS_WITH_YOUR_IMAGE_IN_ASSETS')
-      }
-    end
+      @markers = @apartments.map do |apartment|
+        {
+          lat: apartment.latitude,
+          lng: apartment.longitude,
+          infoWindow: render_to_string(partial: "info_window", locals: { apartment: apartment })
+          #image_url: helpers.asset_url('REPLACE_THIS_WITH_YOUR_IMAGE_IN_ASSETS')
+        }
+      end
     end
   end
 

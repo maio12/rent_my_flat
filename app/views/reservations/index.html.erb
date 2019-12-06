@@ -11,6 +11,7 @@
                   <%= link_to("Create review", new_reservation_review_path(x))  %>
                   <p class="address"> <%= x.apartment.address %></p>
                   <br>
+                  <p class="reserveddates"> <%= x.date_in %> through <%= x.date_out %></p>
                   <br>
                 </div>
               </div>
