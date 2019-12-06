@@ -1,6 +1,6 @@
 <div class='container d-flex justify-content: flex-start'>
   <div class="card-product">
-    <h1 class="show-title"><%= @apartment.title %></h1>
+    <h1 class="show-title"><%= "Beautiful apartment in #{(@apartment.address).split(" ")[-1]}" %></h1>
     <section class= "pictures-section">
       <div class="main-picture"><%= image_tag @apartment.photo_url %></div>
       <div class= "small-pictures">
